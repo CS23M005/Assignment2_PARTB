@@ -6,12 +6,19 @@ dl_assn2_partb consist of two files
 
 run dl_assn2_partb.py with the optinal arguments by using the wandb API key.
 arguments are as follows
+
     '-wp', '--wandb_project', type=str, default="Assignment2_PartB", help="wandb project name"
+    
     '-opt', '--optim_name', type=str, default="nadam", choices = ['sgd','adam','nadam'], help="optimizer for backprop"
+    
     '-bS', '--batchSize', type=int, default=32, choices = [32, 64], help="batch size")
+    
     '-ag', '--data_aug', type=str, default="no", choices = ['yes', 'no'], help="data augmentation"
+    
     '-nE', '--num_epochs', type=int, default=5, choices = [5, 10], help="number of epochs"
+    
     '-lR', '--learning_rate', type=float, default=1e-3, choices = [1e-3, 1e-4], help="learning rate"
+    
     
 This initiates a call to train_cnn_ud() which will import the RESNET50 base model and fine-tune as per the requirement, this vill produce validation and test accuracy and logs it in wandb CS23M005/Assignment2_PARTB.
 
